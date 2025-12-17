@@ -1,13 +1,14 @@
 export default function ItemCard({
-    imageSrc,
+    image,
     name,
     rarity,
 }) {
     return (
         <div className="flex flex-col gap-3 rounded-sm bg-[#4D9EB3] shadow-lg p-4 w-full max-w-sm">
             <div className="w-full aspect-[4/3] overflow-hidden rounded-lg flex items-center justify-center">
-                {imageSrc ? (
-                    <img src={imageSrc} alt={name || "Item image"} className="h-full w-full object-cover" />
+                {image ? (
+                    // <img src={imageSrc} alt={name || "Item image"} className="h-full w-full object-cover" />
+                    <span className="text-6xl">{image}</span>
                 ) : (
                     <span className="text-white text-sm font-fredoka">No Image ):</span>
                 )}

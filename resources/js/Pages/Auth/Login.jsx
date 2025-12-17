@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Head, Link } from '@inertiajs/react';
 
+import MainLayout from '@/Layouts/MainLayout';
 import Button from '@/Components/button';
 import FormField from '@/Components/formField';
 
@@ -24,10 +25,10 @@ export default function LoginForm() {
     };
 
     return (
-        <>
+        <MainLayout>
             <Head title="Log In" />
             
-            <div className="min-h-screen bg-[#087592] py-48 px-4 flex justify-center">
+            <div className="min-h-screen bg-[#087592] py-48 pt-20 px-4 flex justify-center">
                 <div className="w-full max-w-2xl">
                     <h1 className="text-[42px] font-bold mb-6 font-fredoka text-white text-center">Log In</h1>
                     
@@ -46,6 +47,6 @@ export default function LoginForm() {
                     </form>
                 </div>
             </div>
-        </>
+        </MainLayout>
     );
 }

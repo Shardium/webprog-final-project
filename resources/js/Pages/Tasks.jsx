@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { Head } from "@inertiajs/react";
+import MainLayout from "@/Layouts/MainLayout";
 import TaskCard from "@/Components/taskCard";
 import Button from "../Components/button";
 
@@ -21,7 +23,9 @@ export default function Tasks() {
     const weeklyTasks = tasks.filter(task => task.type === 'weekly');
     
     return (
-        <>
+        <MainLayout>
+            <Head title="Tasks" />
+            
             {/* background */}
             <div className="min-h-screen bg-[#087592]">
                 <div className="flex justify-center">
@@ -66,6 +70,6 @@ export default function Tasks() {
                     </div>
                 </div>
             </div>
-        </>
+        </MainLayout>
     );
 }

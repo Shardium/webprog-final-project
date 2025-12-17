@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Head, Link } from '@inertiajs/react';
 
+import MainLayout from '@/Layouts/MainLayout';
 import Button from '@/Components/button';
 import FormField from '@/Components/formField';
 
@@ -26,16 +27,19 @@ export default function LoginForm() {
     };
 
     return (
-        <>
-            <Head title="Log In" />
+        <MainLayout>
+            <Head title="Sign Up" />
             
-            <div className="min-h-screen bg-[#087592] py-48 px-4 flex justify-center">
+            <div className="min-h-screen bg-[#087592] py-48 pt-20 px-4 flex justify-center">
                 <div className="w-full max-w-[90%] flex gap-8">
                     {/* Left - Image container */}
                     <div className="hidden lg:flex lg:w-1/2 bg-[#065a70] rounded-2xl h-[600px] items-center justify-center">
-                        <div className="text-white text-center">
-                            <p className="font-fredoka text-2xl">Welcome</p>
+                        <div className='text-[170px] text-white font-fredoka'>
+                            🎮+💧
                         </div>
+                        {/* <div className="text-white text-center">
+                            <p className="font-fredoka text-2xl">Welcome</p>
+                        </div> */}
                     </div>  
 
                     {/* Right - Form */}
@@ -62,6 +66,6 @@ export default function LoginForm() {
                     </div>
                 </div>
             </div>
-        </>
+        </MainLayout>
     );
 }

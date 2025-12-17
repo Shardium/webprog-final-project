@@ -1,12 +1,21 @@
 import { Head } from '@inertiajs/react';
 import MainLayout from '@/Layouts/MainLayout';
+import ItemCard from '@/Components/itemCard';
 
 const collectibles = [
-    { name: 'Smiley', rarity: '★', owned: true, image: '😀' },
-    { name: 'Laughing', rarity: '★', owned: true, image: '😆' },
-    { name: '???', rarity: '★★', owned: false },
-    { name: 'Cold Face', rarity: '★★★', owned: true, image: '🥶' },
-    { name: 'Skull', rarity: '★★★', owned: true, image: '💀' },
+    { id: 1, name: 'Smiley', rarity: '★', image: '😀' },
+    { id: 2, name: 'Laughing', rarity: '★', image: '😆' },
+    { id: 3, name: '???', rarity: '★★' },
+    { id: 4, name: 'Cold Face', rarity: '★★★', image: '🥶' },
+    { id: 5, name: 'Skull', rarity: '★★★', image: '💀' },
+    { id: 6, name: '???', rarity: '★★' },
+    { id: 7, name: '???', rarity: '★★' },
+    { id: 8, name: '???', rarity: '★★' },
+    { id: 9, name: '???', rarity: '★★' },
+    { id: 10, name: '???', rarity: '★★' },
+    { id: 11, name: '???', rarity: '★★' },
+    { id: 12, name: '???', rarity: '★★' },
+    { id: 13, name: '???', rarity: '★★' },
 ];
 
 export default function Inventory() {
@@ -14,30 +23,22 @@ export default function Inventory() {
         <MainLayout>
             <Head title="Inventory" />
 
-            <div className="p-12">
-                <h1 className="text-3xl font-bold text-center text-white mb-8">
-                    Inventory
-                </h1>
-
-                <div className="grid grid-cols-5 gap-6 max-w-5xl mx-auto">
-                    {collectibles.map((item, idx) => (
-                        <div
-                            key={idx}
-                            className="bg-[#4FA6BD] rounded-lg p-6 text-center text-white"
-                        >
-                            <div className="text-5xl mb-2">
-                                {item.owned ? item.image : '❓'}
-                            </div>
-
-                            <div className="font-semibold">
-                                {item.owned ? item.name : '???'}
-                            </div>
-
-                            <div className="text-sm">
-                                {item.rarity}
+            {/* background */}
+            <div className="min-h-screen bg-[#087592]">
+                <div className="flex justify-center">
+                    {/* foreground */}
+                    <div className="w-[80%] max-w-[1600px] min-h-screen flex justify-center p-16 bg-[#F9FEFF] backdrop-blur-sm border border-white/20 shadow-2xl">
+                        {/* inventory panel */}
+                        <div className="w-full self-center p-8 pt-4 bg-[#C0DEE5] rounded-sm">
+                            <h1 className="text-2xl font-poppins font-semibold text-gray-800 text-center pb-4">Inventory</h1>
+                            {/* grid layout */}
+                            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+                                {collectibles.map((item) => (
+                                    <ItemCard key={item.id} {...item} />
+                                ))}
                             </div>
                         </div>
-                    ))}
+                    </div>
                 </div>
             </div>
         </MainLayout>

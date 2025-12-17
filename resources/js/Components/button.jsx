@@ -5,18 +5,22 @@ export default function Button({
     disabled = false,
     type = 'button',
     variant = 'primary',
+    size = 'full',
     ...props
 }) {
-    const baseStyles = 'w-full font-poppins px-3 py-2 text-base text-md rounded-sm transition-colors'
+    const baseStyles = 'w-auto font-poppins py-2 text-base text-md rounded-sm transition-colors'
 
     const variants = {
         primary: 'bg-white text-black hover:bg-gray-300',
         secondary: 'bg-[#087592] text-white hover:bg-[#0B6881]',
     }
 
-    const disabledStyles = disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'
+    const sizes = {
+        'not-full': 'w-auto',
+        'full': 'w-full px-6',
+    }
 
-    const finalClassName = `${baseStyles} ${variants[variant]} ${disabledStyles} ${className}`
+    const finalClassName = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`
   
     return (
         <button
