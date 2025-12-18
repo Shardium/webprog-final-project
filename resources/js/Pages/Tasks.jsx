@@ -7,12 +7,12 @@ import Button from "../Components/button";
 
 export default function Tasks() {
     const [tasks, setTasks] = useState([
-        { id: 1, title: 'My name is', coinYield: 50, description: 'Complete your profile to earn coins.', checked: false, type: 'daily' },
-        { id: 2, title: 'Slenderman', coinYield: 100, description: 'Finish your first quest to get started.', checked: true, type: 'daily' },
-        { id: 3, title: 'Collect my pages', coinYield: 20, description: 'Log in daily to receive rewards.', checked: false, type: 'daily' },
-        { id: 4, title: 'Haunted Forest', coinYield: 200, description: 'Complete all daily tasks for the week.', checked: false, type: 'weekly' },
-        { id: 5, title: 'Ghost Hunt', coinYield: 150, description: 'Invite a friend to join the platform.', checked: true, type: 'weekly' },
-        { id: 6, title: 'Spooky Mansion', coinYield: 300, description: 'Participate in a community event.', checked: false, type: 'weekly' },
+        { id: 1, title: 'Turn off the tap', coinYield: 20, description: 'Turn off the tap while brushing your teeth or washing your hands', checked: false, type: 'daily' },
+        { id: 2, title: 'Take a short shower', coinYield: 50, description: 'Take a shower under 10 minutes today', checked: true, type: 'daily' },
+        { id: 3, title: 'Fix the drip', coinYield: 100, description: 'Check for and report any leaking faucets or pipes at home', checked: false, type: 'daily' },
+        { id: 4, title: 'Water saver streak', coinYield: 150, description: 'Complete at least 3 daily tasks for the week', checked: false, type: 'weekly' },
+        { id: 5, title: 'Reuse & reduce', coinYield: 60, description: 'Reuse leftover water for plants', checked: true, type: 'weekly' },
+        { id: 6, title: 'Water awareness advocate', coinYield: 100, description: 'Share one water-saving tip with a friend or on social media', checked: false, type: 'weekly' },
     ]);
 
     const handleToggle = (id, checked) =>  {
@@ -59,7 +59,7 @@ export default function Tasks() {
                                     <div className="flex gap-1 pt-2">
                                         <img src="Assets/coin.png" alt="Coin" className="h-7 w-7"/>
                                         <div className="text-white text-xl font-poppins font-bold">
-                                            999
+                                            500
                                         </div>
                                     </div>  
 
