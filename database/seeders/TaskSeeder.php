@@ -36,10 +36,10 @@ class TaskSeeder extends Seeder
         ]);
 
         Task::factory()->create([
-            'name' => "Daily Task XXX",
-            'description' => "lorem ipsum save water energy",
+            'name' => "Water Plants Smartly",
+            'description' => "Water plants in the morning or evening to reduce water evaporation.",
             'type' => "daily",
-            'reward_yield' => 10
+            'reward_yield' => 12
         ]);
 
         Task::factory()->create([
@@ -57,15 +57,15 @@ class TaskSeeder extends Seeder
         ]);
 
         Task::factory()->create([
-            'name' => "Weekly Task Example XXX",
-            'description' => "lorem ipsum water clean",
+            'name' => "Check for Leaks",
+            'description' => "Check taps, showerheads, and toilets at home for leaks this week.",
             'type' => "weekly",
             'reward_yield' => 110
         ]);
 
         Task::factory()->create([
-            'name' => "Weekly Task Example YYY",
-            'description' => "lorem ipsum dolor sit amet",
+            'name' => "Rainwater Reuse",
+            'description' => "Collect and reuse rainwater for plants or cleaning at least once this week.",
             'type' => "weekly",
             'reward_yield' => 150
         ]);

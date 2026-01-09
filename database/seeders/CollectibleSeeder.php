@@ -17,37 +17,37 @@ class CollectibleSeeder extends Seeder
         Collectible::factory()->create([
             "name" => "Rain Drop",
             "rarity" => "Common",
-            "image_path" => "collectibles/rain-frog.png"
+            "image_path" => "collectibles/rain_frog.png"
         ]);
 
         Collectible::factory()->create([
             "name" => "Water Leaf",
             "rarity" => "Common",
-            "image_path" => "collectibles/rain-frog.png"
+            "image_path" => "collectibles/rain_frog.png"
         ]);
 
         Collectible::factory()->create([
             "name" => "Crystal Wave",
             "rarity" => "Rare",
-            "image_path" => "collectibles/rain-frog.png"
+            "image_path" => "collectibles/rain_frog.png"
         ]);
 
         Collectible::factory()->create([
             "name" => "Aqua Fairy",
             "rarity" => "Rare",
-            "image_path" => "collectibles/rain-frog.png"
+            "image_path" => "collectibles/rain_frog.png"
         ]);
 
         Collectible::factory()->create([
             "name" => "River Guardian",
             "rarity" => "Epic",
-            "image_path" => "collectibles/rain-frog.png"
+            "image_path" => "collectibles/rain_frog.png"
         ]);
 
         Collectible::factory()->create([
             "name" => "Hydra Relic",
             "rarity" => "Epic",
-            "image_path" => "collectibles/rain-frog.png"
+            "image_path" => "collectibles/rain_frog.png"
         ]);
     }
 }
